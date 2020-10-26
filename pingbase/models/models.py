@@ -6,7 +6,6 @@ class PubWarrantyOverride(AbstractModel):
     
     _inherit = 'publisher_warranty.contract'
     
-    @api.multi
     def update_notification(self, cron_mode=True):
         
         set_param = self.env['ir.config_parameter'].sudo().set_param
